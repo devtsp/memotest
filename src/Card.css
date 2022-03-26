@@ -1,0 +1,31 @@
+.card-container {
+	display: inline-block;
+	box-sizing: border-box;
+	width: calc(100% / 4);
+	line-height: 1.7;
+	aspect-ratio: 1 / 1;
+	background-color: rgb(29, 32, 22);
+	outline: 2px solid rgba(255, 255, 255, 0.664);
+	font-size: 3rem;
+	text-align: center;
+}
+.content {
+	opacity: 0.2;
+	cursor: pointer;
+}
+
+.content:not(.flipped) {
+	transition: opacity ease-in-out 0.7s;
+}
+
+.flipped {
+	pointer-events: none;
+	cursor: none;
+	opacity: 1;
+}
+
+.matched {
+	background-color: rgb(160, 196, 124);
+	pointer-events: none;
+	transition: background-color ease-in-out 0.7s;
+}
