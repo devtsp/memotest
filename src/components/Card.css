@@ -4,11 +4,13 @@
 	width: calc(100% / 4);
 	line-height: 1.7;
 	aspect-ratio: 1 / 1;
-	background-color: rgb(29, 32, 22);
-	outline: 2px solid rgba(255, 255, 255, 0.664);
+	background-color: rgb(53, 56, 46);
+	border: 2px solid rgb(255, 253, 226);
+	border-radius: 10px;
 	font-size: 3rem;
 	text-align: center;
 }
+
 .content {
 	opacity: 0.2;
 	cursor: pointer;
@@ -25,7 +27,7 @@
 }
 
 .matched {
-	background-color: rgb(160, 196, 124);
+	background-color: rgba(152, 211, 235, 0.719);
 	pointer-events: none;
 	transition: background-color ease-in-out 0.7s;
 }

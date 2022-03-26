@@ -1,6 +1,4 @@
 import React from 'react';
-import './Board.css';
-import Card from './Card';
 
 const shuffleCards = () => {
 	const starterCards = ['🦍', '🐝', '🐞', '🐟', '🐓', '🦑', '🦅', '🐢'];
@@ -63,28 +61,4 @@ const useMemotestState = () => {
 	return { cards, gameEnded, matchedMap, flippedMap, flipCard, restart };
 };
 
-function Board() {
-	const { cards, flipCard, flippedMap, matchedMap, gameEnded, restart } =
-		useMemotestState();
-
-	if (gameEnded) setTimeout(() => restart(), 2000);
-
-	return (
-		<>
-			<div className="board">
-				{cards.map((card, index) => (
-					<Card
-						card={index}
-						key={index}
-						value={card}
-						flippedMap={flippedMap}
-						callback={flipCard}
-						matchedMap={matchedMap}
-					/>
-				))}
-			</div>
-		</>
-	);
-}
-
-export default Board;
+export default useMemotestState;
