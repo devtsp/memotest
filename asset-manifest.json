@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memotest/static/css/main.96986fd5.css",
+    "main.js": "/memotest/static/js/main.468e3cfa.js",
+    "index.html": "/memotest/index.html",
+    "main.96986fd5.css.map": "/memotest/static/css/main.96986fd5.css.map",
+    "main.468e3cfa.js.map": "/memotest/static/js/main.468e3cfa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96986fd5.css",
+    "static/js/main.468e3cfa.js"
+  ]
+}
