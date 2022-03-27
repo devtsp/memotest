@@ -1,14 +1,15 @@
 import React from 'react';
+import './StatusBar.css';
 import StartButton from './StartButton';
-import Timer from './Timer';
+import Stopwatch from './Stopwatch';
 import GuessCounter from './GuessCounter';
 
-const StatusBar = ({ gameEnded, restart }) => {
+const StatusBar = ({ restart, guesses, time, isFirstLoad }) => {
 	return (
-		<div className="d-flex justify-content-evenly align-items-center mt-2">
-			<StartButton restart={restart} />
-			<Timer />
-			<GuessCounter />
+		<div className="status-bar d-flex justify-content-evenly align-items-center">
+			<StartButton restart={restart} isFirstLoad={isFirstLoad} />
+			<Stopwatch time={time} />
+			<GuessCounter guesses={guesses} />
 		</div>
 	);
 };

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Josefin+Sans:wght@200;400;600&family=Palette+Mosaic&display=swap');
+
 body {
 	background-color: rgb(255, 253, 226);
+	font-family: 'Cabin', sans-serif;
+}
+
+#app {
+	width: 360px;
 }

@@ -12,7 +12,7 @@
 }
 
 .content {
-	opacity: 0.2;
+	opacity: 0;
 	cursor: pointer;
 }
 
@@ -30,4 +30,8 @@
 	background-color: rgba(152, 211, 235, 0.719);
 	pointer-events: none;
 	transition: background-color ease-in-out 0.7s;
+}
+
+.unabled {
+	pointer-events: none;
 }

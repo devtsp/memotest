@@ -7,11 +7,24 @@ const shuffleCards = () => {
 	);
 };
 
+const startTimer = (setTime, olderInterval) => {
+	clearInterval(olderInterval);
+	let time = 0;
+	const newInterval = setInterval(() => {
+		setTime(++time);
+	}, 1000);
+	return newInterval;
+};
+
 const useMemotestState = () => {
 	const [cards, setCards] = React.useState(shuffleCards());
 	const [flippedMap, setFlippedMap] = React.useState(cards.map(card => false));
 	const [matchedMap, setMatchedMap] = React.useState(cards.map(card => false));
 	const [gameEnded, setGameEnded] = React.useState(false);
+	const [guesses, setGuesses] = React.useState(0);
+	const [time, setTime] = React.useState(0);
+	const [interval, setInterval] = React.useState(null);
+	const [isFirstLoad, setIsFirstLoad] = React.useState(true);
 
 	const handleGuesses = () => {
 		const selectionsArray = cards.filter(
@@ -19,6 +32,7 @@ const useMemotestState = () => {
 		);
 		const selectionsSet = new Set(selectionsArray);
 		if (selectionsArray.length === 2) {
+			setGuesses(guesses + 1);
 			const waitToTableUpkeep = new Promise((res, rej) => {
 				setTimeout(() => {
 					if (selectionsSet.size === 1) {
@@ -52,13 +66,29 @@ const useMemotestState = () => {
 	};
 
 	const restart = () => {
+		setIsFirstLoad(false);
+		setTime(0);
+		setGuesses(0);
+		const newInterval = startTimer(setTime, interval);
+		setInterval(newInterval);
 		setCards(shuffleCards());
 		setFlippedMap(cards.map(card => false));
 		setMatchedMap(cards.map(card => false));
 		setGameEnded(false);
 	};
 
-	return { cards, gameEnded, matchedMap, flippedMap, flipCard, restart };
+	return {
+		cards,
+		guesses,
+		gameEnded,
+		matchedMap,
+		flippedMap,
+		flipCard,
+		restart,
+		time,
+		interval,
+		isFirstLoad,
+	};
 };
 
 export default useMemotestState;
