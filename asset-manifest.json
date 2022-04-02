@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/memotest/static/css/main.96986fd5.css",
-    "main.js": "/memotest/static/js/main.468e3cfa.js",
+    "main.js": "/memotest/static/js/main.453264a8.js",
     "index.html": "/memotest/index.html",
     "main.96986fd5.css.map": "/memotest/static/css/main.96986fd5.css.map",
-    "main.468e3cfa.js.map": "/memotest/static/js/main.468e3cfa.js.map"
+    "main.453264a8.js.map": "/memotest/static/js/main.453264a8.js.map"
   },
   "entrypoints": [
     "static/css/main.96986fd5.css",
-    "static/js/main.468e3cfa.js"
+    "static/js/main.453264a8.js"
   ]
 }
