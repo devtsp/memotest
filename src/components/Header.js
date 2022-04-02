@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
 	return (
 		<div id="header">
-			<h3>🧠 Emoji-Memotest 🧠</h3>
+			<h4>🧠 Emoji-Memotest 🧠</h4>
 			<p id="header-description" className="my-4 text-black-50">
 				{' '}
 				Enjoy once again this tabletop classic..
